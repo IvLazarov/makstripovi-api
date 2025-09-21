@@ -1,9 +1,17 @@
 const express = require('express');
         const app = express();
+        const fs = require('fs')
         const port = process.env.PORT || 3000; // Use process.env.PORT for Railway
 
         app.get('/db/comics', (req, res) => {
-            res.send('Hi!');
+            fs.readFile('db.json', 'utf8', (err, data) => {
+                if (err) {
+                    console.error(err);
+                    return res.status(500).send('Error reading data.');
+                }
+                res.setHeader('Content-Type', 'application/json');
+                res.send(data);
+            });
         });
 
         app.listen(port, () => {
