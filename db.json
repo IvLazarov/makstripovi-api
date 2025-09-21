@@ -1,0 +1,21 @@
+{
+    "comics": [
+      {
+        "id": 0,
+        "name": "Семе",
+        "author": "Иван Коминовски",
+        "year": 2025,
+        "cover": "lokalna slika ili so link",
+        "pages": ["niza sliki"]
+      },
+  
+      {
+        "id": 1,
+        "name": "Жан-Пјер Еклер",
+        "author": "Иван Лазаров",
+        "year": 2025,
+        "cover": "lokalna slika ili so link",
+        "pages": ["niza sliki"]
+      }
+    ]
+  }
