@@ -3,7 +3,7 @@ const express = require('express');
         const fs = require('fs')
         const port = process.env.PORT || 3000; // Use process.env.PORT for Railway
 
-        app.get('/db/comics', (req, res) => {
+        app.get('/db', (req, res) => {
             fs.readFile('db.json', 'utf8', (err, data) => {
                 if (err) {
                     console.error(err);
